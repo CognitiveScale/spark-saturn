@@ -7,7 +7,7 @@ import com.c12e.sbt.plugins.StaticChecksPlugin.
     wartsIgnored }
 
 lazy val root =
-  app("saturn")
+  app("spark-saturn")
     .project
     .enablePlugins(NativePackagerPlugin)
     .disablePlugins(ClasspathCheckPlugin)
