@@ -6,6 +6,20 @@ import com.c12e.sbt.plugins.StaticChecksPlugin.
   { JavacCheck, ScalacCheck, Wart, javacChecksIgnored, scalacChecksIgnored,
     wartsIgnored }
 
+organization := "com.c12e"
+
+scalaVersion := "2.11.7"
+
+crossScalaVersions := Seq("2.10.5", "2.11.7")
+
+//spName := "CognitiveScale/spark-saturn"
+
+//sparkVersion := "1.6.1"
+
+//releaseCrossBuild := true
+
+licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0"))
+
 lazy val root =
   app("spark-saturn")
     .project
@@ -42,7 +56,7 @@ lazy val root =
           "org.apache.spark" %% "spark-sql" % "1.6.1",
           "org.apache.avro" % "avro" % "1.7.7",
           "com.datastax.cassandra" % "cassandra-driver-core" % "3.0.2",
-          "com.datastax.spark" %% "spark-cassandra-connector" % "1.6.0",
+//          "com.datastax.spark" %% "spark-cassandra-connector" % "1.6.0",
 //          "com.databricks" %% "spark-csv" % "1.4.0",
 //          "com.stratio.datasource" %% "spark-mongodb" % "0.11.2",
           scalaTest
